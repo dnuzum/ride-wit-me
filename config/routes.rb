@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   root 'main#index'
+  get 'auth/:provider/callback' => 'auth#callback'
+  get 'auth/logout' => 'auth#logout'
+  get 'auth/failure' => 'auth#failure'
 
   get 'users/new'
 
