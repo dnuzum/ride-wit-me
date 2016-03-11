@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'passwords/new'
+
+  get 'passwords/edit'
+
   root 'main#index'
   get 'auth/:provider/callback' => 'auth#callback'
   get 'auth/logout' => 'auth#logout'
@@ -11,6 +15,11 @@ Rails.application.routes.draw do
   get 'users/show'
 
   get 'about' => 'main#about'
+
+  get 'reset' => 'passwords#new'
+  post 'reset' => 'passwords#create'
+  get 'reset/:code' => 'passwords#edit', as: :reset_code
+  put 'reset/:code' => 'passwords#update'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
