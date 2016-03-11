@@ -6,6 +6,8 @@ class AuthController < ApplicationController
       u.provider_hash = provider_user['credentials']['token']
       u.name = provider_user['info']['name']
       u.email = provider_user['info']['email']
+      u.picture = provider_user['info']['image']
+
     end
 
     session[:user_id] = user.id
