@@ -3,6 +3,7 @@ class PasswordsController < ApplicationController
   end
 
   def edit
+  	 @code = params[:code]
   end
 
   def create
@@ -11,12 +12,8 @@ class PasswordsController < ApplicationController
 	    user.set_password_reset
 	    UserMailer.password_reset(user).deliver_now
 	  end
-	  flash[:warning] = 'Password reset sent if email exists'
+	  flash[:warning] = 'Password reset sent if email exists!'
 	  redirect_to root_path
-	end
-
-	def edit
-	  @code = params[:code]
 	end
 
 	def update
