@@ -1,0 +1,81 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+ */
+
+$navbar-default-bg: #002244;
+$navbar-default-color: #fff;
+$navbar-default-link-color: #fff;
+$font-family-sans-serif: Lobster;
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+
+html{
+background-color: #9099A2;
+ }
+
+.search_form{
+	width: 85%;
+	margin: 0 auto;
+}
+
+.well{
+	background-color: #96858f;
+}
+
+.search_box{
+	width: 60%;
+	margin: 2% auto;
+	border-radius: 5%;
+}
+
+.mission_statement{
+	width: 50%;
+	text-align: center;
+	margin: 2% auto;
+	color: #d5d5d5;
+}
+
+.small_logo{
+	margin-top: 0;
+}
+
+.small_title{
+	margin-left: 5%;
+}
+
+a img{
+	height: 50px;
+	position: absolute;
+	top: 0;
+}
+
+#container{
+font-family: 'Montserrat', sans-serif;
+background-color: #9099A2;
+height: 100%;
+}
+
+.fbLogin{
+text-align: center;
+}
+
+
+.logo{
+	margin: 0 auto;
+	background-size: contain;
+	background-repeat: no-repeat;
+	text-align: center;
+}
