@@ -1,11 +1,24 @@
-<h1>Contigo~ </h1>
 
-<%= link_to "Login with Facebook", "/auth/facebook", class: "btn btn-primary" %>
-<%= link_to "Logout", auth_logout_path %>
 
-<div class="well">
-  Current User:
-  <%= @current_user.inspect %>
+<div class="logo">
+ <%= image_tag "logo.png" %>
 </div>
 
+<div class="fbLogin">
+<%= link_to "Login with Facebook", "/auth/facebook", class: "btn btn-primary" %>
+</div>
 
+<div class="well">
+	<h3 class="mission_statement">TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE</h3>
+</div>
+
+<div class="well search_box">
+	<form action="" method="POST" role="form" class="search_form">
+		<legend>Search</legend>
+		<div class="form-group">
+			<label for="">label</label>
+			<input type="text" class="form-control" id="" placeholder="Zip Code">
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>

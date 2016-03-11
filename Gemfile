@@ -27,6 +27,9 @@ gem 'omniauth'
 #gem omni-auth fb
 gem 'omniauth-facebook'
 
+gem 'bootstrap_form'
+gem 'bootstrap-sass'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
