@@ -52,5 +52,7 @@ group :development do
   gem 'spring'
 
   gem 'letter_opener'
+
+  gem 'rails_12factor', group: :production
 end
 
