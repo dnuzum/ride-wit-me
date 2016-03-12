@@ -29,7 +29,8 @@ gem 'omniauth-facebook'
 
 gem 'bootstrap_form'
 gem 'bootstrap-sass'
-
+gem 'rest-client'
+gem 'typhoeus'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -52,5 +53,7 @@ group :development do
   gem 'spring'
 
   gem 'letter_opener'
+
+  gem 'rails_12factor', group: :production
 end
 
