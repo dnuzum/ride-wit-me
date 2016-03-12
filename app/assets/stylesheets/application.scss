@@ -197,11 +197,13 @@ text-align: center;
 
 .profile_description{
 	margin-top: 9%;
+  font-size: 1.5em;
 }
 
 .favs{
 	margin: 0 auto;
 	text-align: center;
+  font-size: 1.5em;
 	width: 100%;
 	
 }
@@ -220,13 +222,56 @@ text-align: center;
 	font-size: 2em;
 }
 
-@media screen and (min-width: 800px)and(max-width: 1500px){
+/*Modal on search page*/
+.modal-body {
+  width: 100%,
+}
 
-.profile_image{
+.modal-body .control-label {
+  text-align: left;
+}
+
+@media screen and (min-width: 500px) and (max-width: 799px) {
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+
+
+.profile_image {
 	float: left;
-	margin-left: 15%;
+  
 }
 
 }
+/*may not need buy implementing anyway for SUPER RESPONSIVE!*/
+
+@media screen and (min-width: 1001px)and(max-width: 1200px) { 
+
+}
+
+@media screen and (min-width: 1201px)and(max-width: 1500px){
+
+}
+
+@media screen and (min-width: 1501px)and(max-width: 1800px){
+
+}
+
+@media screen and (min-width: 1801px)and(max-width: 2000px){
+
+
+}
+/* captures projector and large screens.*/
+
+@media screen and (min-width: 2000px){
+
+}
+
+
+
+
+
+
 
 

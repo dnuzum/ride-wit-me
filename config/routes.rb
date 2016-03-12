@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'passwords/new'
-
-  get 'passwords/edit'
 
   root 'main#index'
   get 'auth/:provider/callback' => 'auth#callback'
@@ -12,9 +9,18 @@ Rails.application.routes.draw do
 
   get 'users/create'
 
-  get 'users/show'
-
+  get 'profile' => 'users#show'
   get 'about' => 'main#about'
+  
+  get 'destination' => 'destination#index'
+  get 'destination/new'
+  put 'destination/:id' => 'destination#update'
+  delete 'destination/:id' => 'destination#destroy'
+  post 'destination/:id' => 'destination#create'
+
+  get 'passwords/new'
+
+  get 'passwords/edit'
 
   get 'reset' => 'passwords#new'
   post 'reset' => 'passwords#create'
