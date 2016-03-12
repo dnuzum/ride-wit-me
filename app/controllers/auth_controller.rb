@@ -7,12 +7,11 @@ class AuthController < ApplicationController
       u.name = provider_user['info']['name']
       u.email = provider_user['info']['email']
       u.picture = provider_user['info']['image']
-
+      UserMailer.connect(u).deliver_now
     end
 
     session[:user_id] = user.id
     redirect_to root_path
-    
     # render json: provider_user
   end
 
