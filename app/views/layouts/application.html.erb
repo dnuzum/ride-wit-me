@@ -29,13 +29,10 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav navbar-right">
-        <% if @current_user %>
-					 <%= link_to "Logout", auth_logout_path %>
-         <% end %>
-					 <li class="active"><a href="#">Link</a></li>
-					 <li><a href="#">Link</a></li>
-         
-				
+					<%= link_to "Logout", auth_logout_path %>
+					<li class="active"><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+				  <%= link_to "Search", destination_path %>
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div>
