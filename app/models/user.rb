@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  belongs_to_and_has_many :locations
+  has_and_belongs_to_many :locations
 
 	def set_password_reset
   # this will ensure users with duplicate codes
