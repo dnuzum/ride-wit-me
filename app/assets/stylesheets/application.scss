@@ -14,9 +14,9 @@
  */
 
 /*
-Project Name: Group badass
+Project Name: Contigo
 Client: Your Client
-Author: Tits McGee
+Author: Cassie, Jonathan, Derek, Navya
 Developer @GA in Seattle
 */
 
@@ -71,20 +71,23 @@ Developer @GA in Seattle
 /* BASE STYLES
 /*******************************************/
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-
-$navbar-default-bg: #002244;
-$navbar-default-color: #fff;
+/*$navbar-default-bg: #002244 !default;
+$navbar-default-color: #000 !default;
 $navbar-default-link-color: #fff;
 $font-family-sans-serif: Lobster;
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
-
+*/
 
 html{
 background-color: #9099A2;
  }
+
+.navbar {
+	background-color: #d5d5d5 !important;
+}
 
 .search_form{
 	width: 85%;

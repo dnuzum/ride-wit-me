@@ -2,6 +2,7 @@
 
 <div class='map_container'> 
 </div>
+
 <h2>directions for page mofo'sdirections for page mofo'sdirections for page mofo'sdirections for page mofo'sdirections for page mofo'sdirections for page mofo'sdirections for page mofo's</h2>
 
 <a class="btn btn-primary" data-toggle="modal" href='#search'>Search</a>
@@ -24,4 +25,15 @@
     </div>
   </div>
 </div>
+
+
+<h1> Destinations </h1>
+
+<%= form_tag destination_path, :method => :get do %>
+
+<p>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search Near", :name => nil%>
+  <% end %>
+</p>
 
