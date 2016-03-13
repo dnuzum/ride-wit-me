@@ -1,6 +1,10 @@
 class DestinationController < ApplicationController
   def index
-    @destination  = Location.all
+    if params[:search].present?
+      @destination = Destination.near(params[:search], 50, :order => :distance)
+    else
+      @destination  = Location.all
+    end
   end
 
   def new
