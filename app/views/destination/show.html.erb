@@ -1,0 +1,18 @@
+<ul>
+  <%= for destination in @destination,nearbys(10) %>
+    <li><%= link_to destination.address, location %> (<%= destination.distance.round(2)%> miles)</li>
+    <% end %>
+    </ul <% title "Location"%>>
+
+    <P>Address: <%= @destination.address %></P>
+    <h3>Nearby Locations</h3>
+<ul>
+
+<% for destination in @destination.nearbys(10) %>
+  <li> <%= link_to destination.address, location %>(<%= destination.distance(2) miles %>) </li>
+  <% end %>
+</ul>
+
+<P>
+  <%= link_to "View All", destination_path %>
+</P>
