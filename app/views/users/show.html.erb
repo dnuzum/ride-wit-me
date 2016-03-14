@@ -7,9 +7,31 @@
 		</div>
 
 		<div class="profile_description col-lg-6 col-md-6 col-sm-6">
-			<h2>Name of motha fucka</h2>
-			<p>TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE</p>
+			<h2><%= @current_user.name %></h2>
+			<h2>User description</h2>
+			<p><%= @current_user.about %></p>
 			<button class="btn btn-default">Ride Me</button>
+		</div>
+
+		<a class="btn btn-primary" data-toggle="modal" href='#about'>Update About Me</a>
+		<div class="modal fade" id="about">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title">About Form</h4>
+		      </div>
+		      <div class="modal-body">
+		  
+		      <%= render 'users/form' %>
+
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
 		</div>
 
 	</div>
@@ -19,23 +41,32 @@
 		<div class="favs">
 			<ul>
 				<h1 class="favs_title">Favorite Location</h1>
-				<li>TiTs McGeE TiTs</li>
-				<li>TiTs McGeE TiTs</li>
-				<li>TiTs McGeE TiTs</li>
-				<li>TiTs McGeE TiTs</li>
+				<li> <%= @current_user.favorite %> </li>
+				<a class="btn btn-primary" data-toggle="modal" href='#favorite_locations'>Update Favorite Locations</a>
+				<div class="modal fade" id="favorite_locations">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				        <h4 class="modal-title">Favorite Locations Form</h4>
+				      </div>
+				      <div class="modal-body">
+				  
+				      <%= render 'users/form_favorite_locations' %>
+
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary">Save changes</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
 			</ul>
 		</div>
-
-		<div class="favs">
-			<ul>
-				<h1 class="favs_title">Favorite Peeps</h1>
-				<li>TiTs McGeE TiTs</li>
-				<li>TiTs McGeE TiTs</li>
-				<li>TiTs McGeE TiTs</li>
-				<li>TiTs McGeE TiTs</li>
-			</ul>
-		</div>
-
 	</div>
+
+
+
 
 </div>

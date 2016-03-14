@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
   get 'users/create'
 
+  patch 'users/description' => 'users#edit_description'
+  patch 'users/favorite' => 'users#edit_favorite_locations'
+
   get 'profile' => 'users#show'
   get 'about' => 'main#about'
   
