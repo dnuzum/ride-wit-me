@@ -231,7 +231,48 @@ text-align: center;
   text-align: left;
 }
 
+.nav-button{
+	margin-top: 4%;
+}
+
+.search-title{
+	text-algin: center;
+	margin: 0 auto;
+}
+
+.search{
+	text-decoration: underline;
+	text-align: center;
+}
+
+.map_container{
+	height: 300px;
+	float: none !important;
+	margin: 100px auto;
+	background-color: rgba(0,0,0,.5);
+}
+
+.ride_share{
+	float: none !important;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.search_btn{
+	text-align: center;
+}
+
+.ride_btn image_tag{
+	width: 50px;
+	height: 50px;
+}
+
+
 @media screen and (min-width: 500px) and (max-width: 799px) {
+
+.map_container{
+	height: 400px;
+}
 
 }
 
@@ -243,28 +284,68 @@ text-align: center;
   
 }
 
+.map_container{
+	height: 400px;
+}
+
 }
 /*may not need buy implementing anyway for SUPER RESPONSIVE!*/
 
 @media screen and (min-width: 1001px)and(max-width: 1200px) { 
 
+.profile_image p {
+    width: 300px;
+    height: 300px;
 }
 
+.map_container{
+	height: 500px;
+}
+
+}
 @media screen and (min-width: 1201px)and(max-width: 1500px){
+
+.profile_image p {
+    width: 300px;
+    height: 300px;
+}
+
+.map_container{
+	height: 500px;
+}
 
 }
 
 @media screen and (min-width: 1501px)and(max-width: 1800px){
+
+.profile_image p {
+    width: 300px;
+    height: 300px;
+}
+
+.map_container{
+	height: 600px;
+}
 
 }
 
 @media screen and (min-width: 1801px)and(max-width: 2000px){
 
 
+.profile_image p {
+    width: 350px;
+    height: 350px;
+}
+
 }
 /* captures projector and large screens.*/
 
 @media screen and (min-width: 2000px){
+
+.profile_image p {
+    width: 350px;
+    height: 350px;
+}
 
 }
 
