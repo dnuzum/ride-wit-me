@@ -4,6 +4,7 @@
 
 <div class='map_container col-xs-10 col-sm-8 col-md-8 col-lg-8'> 
   <h1>Map</h1>
+  <div id='map' style="width: 400px; height: 400px"></div>
 </div>
 
 <h2 class="col-xs-10 well ride_share">Search for people around you so you can ride-share!</h2>
@@ -30,4 +31,15 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  function initMap() {
+    var map;
+    map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 47.608013, lng: -122.335167},
+    zoom: 12
+    });
+  }
+</script>
+<script src="http://maps.googleapis.com/maps/api/js?&key=AIzaSyD1FvXlPmiPGkMbKwKmIONb3g5uFWwp3Hg&callback=initMap" async defer></script>
 
