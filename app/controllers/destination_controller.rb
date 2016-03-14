@@ -1,10 +1,14 @@
 class DestinationController < ApplicationController
   def index
-    @destinations = Location.all
+    if params[:search].present?
+      @destination = Destination.near(params[:search], 50, :order => :distance)
+    else
+      @destination  = Destination.all
+    end
   end
 
   def new
-    @destination = Location.new
+    @destination = Destitnation.new
   end
 
   def update
@@ -15,7 +19,7 @@ class DestinationController < ApplicationController
   end
 
   def create
-    destination = Location.create destination_params do |d|
+    destination = Destination.create destination_params do |d|
       d.user_id = @current_user.id 
       d.save
     end
