@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   
   get 'destination' => 'destination#index'
   get 'destination/new'
+  get 'destination/show' => "desination#show"
   put 'destination/:id' => 'destination#update'
   delete 'destination/:id' => 'destination#destroy'
   post 'destination/:id' => 'destination#create'
