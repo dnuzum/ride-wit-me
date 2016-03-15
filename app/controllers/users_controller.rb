@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
-
+    @user = User.find(params[:id])
   end
 
   def edit_description
@@ -22,5 +22,7 @@ class UsersController < ApplicationController
   	user.save
   	redirect_to profile_path
   end
+
+  
 
 end

@@ -9,6 +9,17 @@
 
 <h2 class="col-xs-10 well ride_share">Search for people around you so you can ride-share!</h2>
 
+<div>
+  <ul>
+    <% @destinations.each do |d| %>
+      <li>Traveling to: <%= d.address %> <span> at <%= d.time %></span></li>
+      <% d.users.each do |u| %>
+        <a href="/users/<%= u.id %>"><%= u.name %></a>
+        <% end %>
+    <% end %>
+  </ul>
+</div>
+
 <br/>
 
 <a class="btn btn-primary search_btn " data-toggle="modal" href='#search'>Search</a>
