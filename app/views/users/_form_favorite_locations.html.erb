@@ -1,0 +1,5 @@
+<%= bootstrap_form_for @current_user, url: users_favorite_path do |f| %>
+  <%= f.label 'What are your favorite locations you go to' %>
+  <%= f.text_field :favorite %>  
+  <%= f.submit :submit %>    
+<% end %>
