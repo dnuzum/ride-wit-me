@@ -96,30 +96,55 @@ background-color: #9099A2;
 }
 
 .search_box{
-	width: 60%;
+	width: 80%;
 	margin: 2% auto;
 	border-radius: 5%;
 }
 
-.mission_statement{
-	width: 50%;
+.search_box h5{
 	text-align: center;
-	margin: 2% auto;
-	color: #d5d5d5;
+}
+
+.mission_statement{
+	width: 95%;
+	text-align: center;
+	margin: 0 auto;
+	color: rgba(0,0,0,.6);
+}
+
+.mission_container{
+	margin-top: 2%;
 }
 
 .small_logo{
 	margin-top: 0;
 }
 
+.navbar-brand{
+	padding: 0 !important;
+}
+
 .small_title{
 	margin-left: 5%;
 }
 
+.ride_btn{
+	text-align: center;
+}
+
 a img{
 	height: 50px;
-	position: absolute;
-	top: 0;
+}
+
+.uber_btn{
+	margin-left: 2%;
+}
+
+.arrow{
+	margin-top: 0;
+	margin-right: 0;
+	padding: 0;
+	font-size: 4em;
 }
 
 .about_title{
@@ -165,6 +190,10 @@ text-align: center;
 	text-align: center;
 }
 
+.profile_image{
+	text-align: center;
+}
+
 .profile_image p{
 	width: 250px;
 	height: 250px;
@@ -172,6 +201,13 @@ text-align: center;
 	border: 2px solid #fff;
 	background-color: #000;
 	border-radius: 100%;
+}
+
+.profile_image img{
+	width: 270px;
+	height: 150px;
+	border-radius: 100%;
+	border: 2px solid #fff;
 }
 
 .profile_title{
@@ -250,14 +286,15 @@ text-align: center;
 	margin: 0 auto;
 }
 
+.get_ride{
+	width: 90%;
+	margin: 0 auto;
+}
+
 .search_btn{
 	text-align: center;
 }
 
-.ride_btn image_tag{
-	width: 50px;
-	height: 50px;
-}
 
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
