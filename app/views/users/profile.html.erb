@@ -6,14 +6,14 @@
 			<img src="<%= @current_user.picture %>?type=large"/>
 		</div>
 
-		<div class="profile_description col-lg-6 col-md-6 col-sm-6">
+		<div class="profile_description well col-lg-6 col-md-6 col-sm-6">
 			<h2><%= @current_user.name %></h2>
 			<h2>User description</h2>
 			<p><%= @current_user.about %></p>
-			<button class="btn btn-default">Ride Me</button>
+			<a class="btn btn-primary description_btn" data-toggle="modal" href='#about'>Update Description</a>
 		</div>
 
-		<a class="btn btn-primary" data-toggle="modal" href='#about'>Update About Me</a>
+		
 		<div class="modal fade" id="about">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
@@ -28,7 +28,6 @@
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
 		      </div>
 		    </div>
 		  </div>
@@ -38,10 +37,11 @@
 
 	<div class="profile_bottom col-sm-12">
 
-		<div class="favs">
+		<div class="favs well">
 			<ul>
 				<h1 class="favs_title">Favorite Location</h1>
 				<li> <%= @current_user.favorite %> </li>
+			</ul>
 				<a class="btn btn-primary" data-toggle="modal" href='#favorite_locations'>Update Favorite Locations</a>
 				<div class="modal fade" id="favorite_locations">
 				  <div class="modal-dialog">
@@ -56,8 +56,7 @@
 
 				      </div>
 				      <div class="modal-footer">
-				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				        <button type="button" class="btn btn-primary">Save changes</button>
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>				        
 				      </div>
 				    </div>
 				  </div>
