@@ -1,4 +1,5 @@
 <%= @user.name %>
 <%= @user.about %>
 <%= @user.favorite %>
-<button class="btn btn-default">Ride With Me</button>
+
+<%= link_to  "Share a ride with me", user_share_path(@user) %>

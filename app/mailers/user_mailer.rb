@@ -21,15 +21,11 @@ class UserMailer < ApplicationMailer
     mail to: user.email, subject: 'Welcome to Contigo!'
   end
 
-  def greeting_at_registration
-    @greeting = 'Hi'
+  def find_share(user, current_user)
+    @user = user 
+    @current_user = current_user
+    mail to: user.email, subject: 'Let\'s share a ride!'
 
-    mail to: 'to@example.org'
   end
-
-  # def password_reset
-  #   @user = user
-  #   mail to: user.email, subject: 'Password Reset'
-  # end
 
 end
