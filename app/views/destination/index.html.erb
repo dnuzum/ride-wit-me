@@ -35,11 +35,29 @@
 <script type="text/javascript">
   function initMap() {
     var map;
-    map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 47.608013, lng: -122.335167},
-    zoom: 12
+    handler = Gmaps.build('Google');
+    handler.buildMap({ 
+      provider: {
+        zoom: 16,
+        center: {lat: 47.608013, lng: -122.335167}
+      }, 
+      internal: {
+        id: 'map'
+      }
+    }, 
+    function(){
+      markers = handler.addMarkers([
+        {
+          "lat": 47.608013,
+          "lng": -122.335167,
+          "infowindow": "hello!"
+        }
+      ]);
+      handler.bounds.extendWith(markers);
+      // handler.fitMapToBounds();
     });
   }
 </script>
-<script src="http://maps.googleapis.com/maps/api/js?&key=AIzaSyD1FvXlPmiPGkMbKwKmIONb3g5uFWwp3Hg&callback=initMap" async defer></script>
+<script src="http://maps.googleapis.com/maps/api/js?&key=<%= ENV["GOOGLE_KEY"] %>&libraries=geometry&callback=initMap" async defer></script>
+<script src="//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js"></script>
 
