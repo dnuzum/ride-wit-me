@@ -6,17 +6,19 @@ Rails.application.routes.draw do
   get 'auth/failure' => 'auth#failure'
 
   get 'users/new'
-
+  get 'users/:id' => 'users#show'
   get 'users/create'
 
   patch 'users/description' => 'users#edit_description'
   patch 'users/favorite' => 'users#edit_favorite_locations'
+  
 
-  get 'profile' => 'users#show'
+  get 'profile' => 'users#profile'
+
   get 'about' => 'main#about'
   
   get 'destination' => 'destination#index'
-  get 'destination/new'
+  get 'destination/new' => 'destination#new'
   put 'destination/:id' => 'destination#update'
   delete 'destination/:id' => 'destination#destroy'
   post 'destination/:id' => 'destination#create'
