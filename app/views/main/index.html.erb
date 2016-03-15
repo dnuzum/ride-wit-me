@@ -8,11 +8,20 @@
 <%= link_to "Login with Facebook", "/auth/facebook", class: "btn btn-primary" %>
 </div>
 
-<div class="well">
-	<h3 class="mission_statement">TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE TiTs McGeE</h3>
+<div class="well mission_container">
+	<h3 class="mission_statement"> Contigo is a Uber/Lyft based application, that will help our users find people around them traveling to a common area. Just search by your current location and Contigo will find people you can share an Uber/Lyft ride with. Contigo makes ride sharing easy while also saving you time and money!</h3>
+</div>
+
+<div class="ride_btn">
+	<h2 class="get_ride">Click on the links bellow to get connected with a Uber/Lyft driver</h2>
+	<span class="arrow">&#8594;</span>
+	<a href="lyft://"> <%= image_tag('lyft_mobile.png')%> </a>
+	<a href="<%= @uber_url %>" class="uber_btn"><%= image_tag('uber_mobile.png')%> </a> 
+	<span class="arrow">&#8592;</span>
 </div>
 
 <div class="well search_box">
+	<h5>Search your zip code to find people taking Uber/Lyft rides</h5>
 	<form action="" method="POST" role="form" class="search_form">
 		<legend>Search</legend>
 		<div class="form-group">

@@ -8,6 +8,7 @@ class AuthController < ApplicationController
       u.email = provider_user['info']['email']
       u.picture = provider_user['info']['image']
       UserMailer.connect(u).deliver_now
+
     end
 
     session[:user_id] = user.id

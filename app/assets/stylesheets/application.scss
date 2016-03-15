@@ -96,30 +96,55 @@ background-color: #9099A2;
 }
 
 .search_box{
-	width: 60%;
+	width: 80%;
 	margin: 2% auto;
 	border-radius: 5%;
 }
 
-.mission_statement{
-	width: 50%;
+.search_box h5{
 	text-align: center;
-	margin: 2% auto;
-	color: #d5d5d5;
+}
+
+.mission_statement{
+	width: 95%;
+	text-align: center;
+	margin: 0 auto;
+	color: rgba(0,0,0,.6);
+}
+
+.mission_container{
+	margin-top: 2%;
 }
 
 .small_logo{
 	margin-top: 0;
 }
 
+.navbar-brand{
+	padding: 0 !important;
+}
+
 .small_title{
 	margin-left: 5%;
 }
 
+.ride_btn{
+	text-align: center;
+}
+
 a img{
 	height: 50px;
-	position: absolute;
-	top: 0;
+}
+
+.uber_btn{
+	margin-left: 2%;
+}
+
+.arrow{
+	margin-top: 0;
+	margin-right: 0;
+	padding: 0;
+	font-size: 4em;
 }
 
 .about_title{
@@ -165,6 +190,10 @@ text-align: center;
 	text-align: center;
 }
 
+.profile_image{
+	text-align: center;
+}
+
 .profile_image p{
 	width: 250px;
 	height: 250px;
@@ -174,6 +203,13 @@ text-align: center;
 	border-radius: 100%;
 }
 
+.profile_image img{
+	width: 270px;
+	height: 150px;
+	border-radius: 100%;
+	border: 2px solid #fff;
+}
+
 .profile_title{
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
@@ -181,14 +217,6 @@ text-align: center;
 	text-decoration: underline;
 }
 
-
-.profile_container div:nth-child(2n){
-	float: right;
-}
-
-.profile_container:nth-child(2n+1){
-	float: left;
-}
 
 .profile_bottom{
 	margin: 10% auto;
@@ -231,7 +259,49 @@ text-align: center;
   text-align: left;
 }
 
+.nav-button{
+	margin-top: 4%;
+}
+
+.search-title{
+	text-algin: center;
+	margin: 0 auto;
+}
+
+.search{
+	text-decoration: underline;
+	text-align: center;
+}
+
+.map_container{
+	height: 300px;
+	float: none !important;
+	margin: 100px auto;
+	background-color: rgba(0,0,0,.5);
+}
+
+.ride_share{
+	float: none !important;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.get_ride{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.search_btn{
+	text-align: center;
+}
+
+
+
 @media screen and (min-width: 500px) and (max-width: 799px) {
+
+.map_container{
+	height: 400px;
+}
 
 }
 
@@ -243,28 +313,68 @@ text-align: center;
   
 }
 
+.map_container{
+	height: 400px;
+}
+
 }
 /*may not need buy implementing anyway for SUPER RESPONSIVE!*/
 
 @media screen and (min-width: 1001px)and(max-width: 1200px) { 
 
+.profile_image p {
+    width: 300px;
+    height: 300px;
 }
 
+.map_container{
+	height: 500px;
+}
+
+}
 @media screen and (min-width: 1201px)and(max-width: 1500px){
+
+.profile_image p {
+    width: 300px;
+    height: 300px;
+}
+
+.map_container{
+	height: 500px;
+}
 
 }
 
 @media screen and (min-width: 1501px)and(max-width: 1800px){
+
+.profile_image p {
+    width: 300px;
+    height: 300px;
+}
+
+.map_container{
+	height: 600px;
+}
 
 }
 
 @media screen and (min-width: 1801px)and(max-width: 2000px){
 
 
+.profile_image p {
+    width: 350px;
+    height: 350px;
+}
+
 }
 /* captures projector and large screens.*/
 
 @media screen and (min-width: 2000px){
+
+.profile_image p {
+    width: 350px;
+    height: 350px;
+}
 
 }
 
