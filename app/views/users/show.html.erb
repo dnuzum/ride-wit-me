@@ -1,5 +1,17 @@
-<%= @user.name %>
-<%= @user.about %>
-<%= @user.favorite %>
+<div class="user_container">
+	<div class="profile_top col-lg-12">
 
-<%= link_to  "Share a ride with me", user_share_path(@user) %>
+		<div class="profile_image col-sm-6 col-md-6 col-lg-6 clearfix:after">
+			<img src="<%= @current_user.picture %>?type=large"/>
+		</div>
+
+		<div class="description_container">
+			<div class="profile_description well col-lg-6 col-md-6 col-sm-6">
+				<h2><%= @user.name %></h2>
+				<p><%= @user.about %></p>
+				<p>Favorite Places: <%= @user.favorite %></p>
+				<button class="btn btn-primary share_btn" <%= link_to  "Share a ride with me", user_share_path(@user) %> ></button>
+			</div>
+		</div>
+	</div>
+</div>

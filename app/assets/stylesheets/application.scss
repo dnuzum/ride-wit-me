@@ -81,14 +81,25 @@ $font-family-sans-serif: Lobster;
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-
-html{
-background-color: #9099A2;
- }
+body{
+	background-color: #d5d5d5;
+	width: 100%;
+	background-image: url("city_pic.png");
+	background-position: contain;
+	background-size: center;
+	background-repeat: no-repeat;
+	
+}
 
 .search_form{
 	width: 85%;
 	margin: 0 auto;
+}
+
+.search_container{
+	margin: 230px auto;
+	text-align: center;
+	margin-bottom: 20px;
 }
 
 .well{
@@ -106,10 +117,18 @@ background-color: #9099A2;
 }
 
 .mission_statement{
+	color: rgba(255,255,255,.8);
 	width: 95%;
+	font-size: 2.5em;
 	text-align: center;
 	margin: 0 auto;
-	color: rgba(0,0,0,.6);
+	font-weight: bold;
+}
+
+.navbar{
+	position: fixed !important;
+	z-index: 99;
+	top: 0;
 }
 
 .mission_container{
@@ -129,6 +148,7 @@ background-color: #9099A2;
 }
 
 .ride_btn{
+	margin-bottom: 5%;
 	text-align: center;
 }
 
@@ -147,8 +167,26 @@ a img{
 	font-size: 4em;
 }
 
+.about_container{
+	height: 457px;
+}
+
 .about_title{
-	font-family: 'Cuprum', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+}
+
+.dev_container{
+	margin-top: 175px;
+}
+
+.dev_title{
+	z-index: 99;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	color: #000;
 	text-align: center;
 }
 
@@ -156,26 +194,58 @@ a img{
 	display: inline-block;
 
 }
-
-.developer_image{
+.developer_image1{
 	width: 200px;
 	height: 200px;
 	border: 2px solid #fff;
-	background-color: #000;
 	border-radius: 100%;
+	background-image: url("cassie.png");
+	background-size: 179% 120%;
+	background-position: center;
 }
 
+.developer_image2{
+	width: 200px;
+	height: 200px;
+	border: 2px solid #fff;
+	border-radius: 100%;
+	background-image: url("navya.png");
+	background-size: contain;
+}
 
+.developer_image3{
+	width: 200px;
+	height: 200px;
+	border: 2px solid #fff;
+	border-radius: 100%;
+	background-image: url("derek.png");
+	background-size: contain;
+	background-position: center;
+}
+
+.developer_image4{
+	width: 200px;
+	height: 200px;
+	border: 2px solid #fff;
+	border-radius: 100%;
+	background-image: url("jonathan.png");
+	background-size: 179% 120%;
+	background-position: center;
+}
 
 .about_us{
-	width: 65%;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.3em;
+	width: 90%;
 	margin: 0 auto;
 }
 
 #container{
 font-family: 'Montserrat', sans-serif;
-background-color: #9099A2;
 height: 100%;
+margin-top: 50px;
 }
 
 .fbLogin{
@@ -190,56 +260,75 @@ text-align: center;
 	text-align: center;
 }
 
+.logo img{
+	margin-top: 2%;
+}
+
 .profile_image{
 	text-align: center;
 }
 
-.profile_image p{
-	width: 250px;
-	height: 250px;
-	margin: 0 auto;
-	border: 2px solid #fff;
-	background-color: #000;
-	border-radius: 100%;
-}
 
 .profile_image img{
 	width: 270px;
 	height: 150px;
-	
-	border: 2px solid #fff;
+	margin-top: 35px;
+	border: 1px solid rgba(255,255,255,.8);
+	border-radius: 5%;
 }
-
-.profile_title{
-	font-family: 'Montserrat', sans-serif;
-	text-align: center;
-	font-size: 4em;
-	text-decoration: underline;
-}
-
 
 .profile_bottom{
-	margin: 10% auto;
+	margin: 5% auto;
 	width: 100%;
+	text-align: center;
 }
 
 .profile_description{
-	margin-top: 9%;
-  font-size: 1.5em;
+	color: #fff;
+	font-weight: bold;
+	margin-top: 5%;
+	margin-bottom: 0 !important;
+  	font-size: 1.5em;
+}
+
+.description_container{
+	background-color: rgba(0,0,0,.5);
+}
+
+.profile_container{
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.description_btn{
+	border: 1px solid #fff !important;
+	margin: 0 auto;
+}
+
+.favorite_btn{
+	border: 1px solid #fff !important;
 }
 
 .favs{
-	margin: 0 auto;
-	text-align: center;
-  font-size: 1.5em;
+	float: none !important;
+	margin: 125px auto;
+  	font-size: 1.5em;
 	width: 100%;
-	
+	color: #fff;
+	font-weight: bold;
+}
+
+.list_favs{
+	margin-left: 0;
 }
 
 .favs ul{
 	list-style-type: none;
-	margin: 0 auto;
-	margin-left: 0;
+	margin-left: 0 !important;
+}
+
+.favs ul li{
+	text-align: center !important;
 }
 
 .favs_title{
@@ -252,69 +341,160 @@ text-align: center;
 
 /*Modal on search page*/
 .modal-body {
-  width: 100%,
+  	width: 100%,
 }
 
 .modal-body .control-label {
-  text-align: left;
+  	text-align: left;
 }
 
-.nav-button{
-	margin-top: 4%;
+.nav-links{
+	color: #96858f !important;
+}
+
+.nav-links:hover{
+	font-size: 1.5em;
+	margin-top: 1%;
 }
 
 .search-title{
 	text-algin: center;
 	margin: 0 auto;
+	color: #fff !important;
 }
 
 .search{
+	color: #fff;
 	text-decoration: underline;
 	text-align: center;
 }
 
 .map_container{
-	height: 300px;
+	height: 190px;
+	color: #fff;
 	float: none !important;
-	margin: 100px auto;
+	margin: 75px auto;
+	margin-left: 0;
+	margin-bottom: 0;
 	background-color: rgba(0,0,0,.5);
 }
 
 .ride_share{
 	float: none !important;
 	text-align: center;
+	margin: 20px auto;
+	color: #fff;
+
+}
+
+.destination_list{
+	float: none !important;
 	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+}
+
+.destination_list ul li{
+	list-style-type: none;
+}
+
+
+.destination_list ul{
+	margin-left: -40px !important;
 }
 
 .get_ride{
+	color: rgba(255,255,255,.8);
+	font-weight: bold;
 	width: 90%;
 	margin: 0 auto;
 }
 
-.search_btn{
-	text-align: center;
+
+#map{
+	width: 350px;
+	height: 350px;
+	margin-left: 0;
+	margin: 0 auto;
+	margin-top: 5%;
 }
 
+footer{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin-top: 0;
+	text-decoration: underline;
+	font-weight: bold;
+	background-color: #9099A2;
+}
+
+footer h4{
+	margin-top: 0;
+}
+
+.well{
+	background-color: rgba(96, 121, 147,.8)!important;
+	border: none !important;
+	margin-bottom: 0 !important;
+}
+
+.search_btn{
+	margin-top:5%;
+}
+
+.search{
+	color: #fff;
+	margin-top: 5%;
+}
 
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
 
+
 .map_container{
-	height: 400px;
+	float: none !important;
+	margin: 75px auto;
+	height: 450px;
+}
+
+.profile_description{
+	margin-bottom: 0 !important;
+}
+
+
+
+.destination_list{
+	font-size: 1.2em;
 }
 
 }
 
 @media screen and (min-width: 800px) and (max-width: 1000px) {
 
-
-.profile_image {
-	float: left;
-  
+body{
+	width: 100%;
+	background-image: url("city_pic.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.profile_image img{
+	margin-top: 11%;
 }
 
-.map_container{
+.search_container{
+	margin: 100px 0;
+}
+
+
+#map{
+	width: 400px;
 	height: 400px;
+}
+
+
+.destination_list{
+	font-size: 1.3em;
 }
 
 }
@@ -322,48 +502,116 @@ text-align: center;
 
 @media screen and (min-width: 1001px)and(max-width: 1200px) { 
 
+body{
+	width: 100%;
+	background-image: url("city_pic.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+ 
+.profile_image img{
+	margin-top: 11%;
+}
+
+.search_container{
+	margin: 100px 0;
+}
+
 .profile_image p {
     width: 300px;
     height: 300px;
 }
 
-.map_container{
-	height: 500px;
+#map{
+	width: 550px;
+	height: 550px;
+}
+
+.destination_list{
+	font-size: 1.3em;
 }
 
 }
 @media screen and (min-width: 1201px)and(max-width: 1500px){
 
+body{
+	width: 100%;
+	background-image: url("city_pic.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
 .profile_image p {
     width: 300px;
     height: 300px;
 }
 
-.map_container{
-	height: 500px;
+#map{
+	width: 600px;
+	height: 600px;
+}
+
+
+.profile_image img{
+	margin-top: 11%;
+}
+
+.destination_list{
+	font-size: 1.3em;
 }
 
 }
 
 @media screen and (min-width: 1501px)and(max-width: 1800px){
 
+body{
+	width: 100%;
+	background-image: url("city_pic.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.profile_image img{
+	margin-top: 11%;
+}
+
 .profile_image p {
     width: 300px;
     height: 300px;
 }
 
-.map_container{
-	height: 600px;
+#map{
+	width: 700px;
+	height: 700px;
+}
+
+
+.destination_list{
+	font-size: 1.3em;
 }
 
 }
 
 @media screen and (min-width: 1801px)and(max-width: 2000px){
 
+body{
+	width: 100%;
+	background-image: url("city_pic.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.profile_image img{
+	margin-top: 11%;
+}
 
 .profile_image p {
     width: 350px;
     height: 350px;
+}
+
+.destination_list{
+	font-size: 1.3em;
 }
 
 }
@@ -371,9 +619,24 @@ text-align: center;
 
 @media screen and (min-width: 2000px){
 
+body{
+	width: 100%;
+	background-image: url("city_pic.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
 .profile_image p {
     width: 350px;
     height: 350px;
+}
+
+.profile_image img{
+	margin-top: 11%;
+}
+
+.destination_list{
+	font-size: 1.3em;
 }
 
 }
