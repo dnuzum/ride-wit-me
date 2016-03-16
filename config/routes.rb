@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get 'users/new'
   get 'users/:id' => 'users#show'
+  get 'users/:id/share' => 'users#share', as: :user_share
   get 'users/create'
 
   patch 'users/description' => 'users#edit_description'
