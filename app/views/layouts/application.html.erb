@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div id="container">
-	<nav class="navbar navbar-default" role="navigation">
+	<nav class="navbar navbar-default col-xs-12" role="navigation">
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -25,21 +25,20 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand small_logo" href="/"><%= image_tag ('small_logo.png')%></a>
+				<a class="navbar-brand small_logo" href="/"><%= image_tag ('small_logo2.png')%></a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav navbar-right">
           <% if @current_user %>
-					 <button class="btn btn-priamry nav-button"><%= link_to "Logout", auth_logout_path %></button>
-					 <button class="btn btn-priamry nav-button"><%= link_to "Profile", profile_path %></button>
+					 <li class="nav-links"><%= link_to "Logout", auth_logout_path %></li>
+					 <li class="nav-links"><%= link_to "Profile", profile_path %></li>
 					 
           <% end %>
-					<li class="active"><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-				  <button class="btn btn-priamry nav-button"><%= link_to "Search", destination_path %></button>
-				<button class="btn btn-priamry nav-button"><%= link_to "Home", root_path %></button>
+					<li class="nav-links"><a href="/about">About Us</a></li>
+				  <li class="nav-links"><%= link_to "Search", destination_path %></li>
+				<li class="nav-links"><%= link_to "Home", root_path %></li>
 
 				</ul>
 			</div><!-- /.navbar-collapse -->
@@ -47,5 +46,8 @@
 	</nav>
 	<%= yield %>
 </div>
+<footer class="col-xs-12">
+	<h5>&copy; Cassie Aguiar, Navya Lakkaraju, Derek Nuzum, Jonathan Stevenson</h5>
+</footer>
 </body>
 </html>
