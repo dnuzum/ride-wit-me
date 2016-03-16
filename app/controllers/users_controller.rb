@@ -23,6 +23,10 @@ class UsersController < ApplicationController
   	redirect_to profile_path
   end
 
+  def share
+    UserMailer.find_share(User.find(params[:id]), @current_user).deliver_now
+    redirect_to profile_path
+  end 
   
 
 end
