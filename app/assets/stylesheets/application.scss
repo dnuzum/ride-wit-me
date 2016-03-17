@@ -83,12 +83,18 @@ $font-family-sans-serif: Lobster;
 
 body{
 	background-color: #d5d5d5;
-	width: 100%;
+	width: 100%;	
+}
+
+#container{
+	font-family: 'Montserrat', sans-serif;
 	background-image: asset-url("city_pic.png");
-	background-position: contain;
+	background-position-x: center;
 	background-size: center;
 	background-repeat: no-repeat;
-	
+	height: 640px;
+	width: 100%;
+	margin: 50px auto;
 }
 
 .search_form{
@@ -97,7 +103,7 @@ body{
 }
 
 .search_container{
-	margin: 230px auto;
+	margin: 250px auto;
 	text-align: center;
 	margin-bottom: 20px;
 }
@@ -168,7 +174,8 @@ a img{
 }
 
 .about_container{
-	height: 457px;
+	margin-top: 50px;
+	height: 640px;
 }
 
 .about_title{
@@ -179,10 +186,11 @@ a img{
 }
 
 .dev_container{
-	margin-top: 175px;
+	margin-top: 50px;
 }
 
 .dev_title{
+	margin-top: 0;
 	z-index: 99;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
@@ -242,11 +250,6 @@ a img{
 	margin: 0 auto;
 }
 
-#container{
-font-family: 'Montserrat', sans-serif;
-height: 100%;
-margin-top: 50px;
-}
 
 .fbLogin{
 text-align: center;
@@ -297,7 +300,7 @@ text-align: center;
 
 .profile_container{
 	max-width: 900px;
-	margin: 0 auto;
+	margin: 50px auto;
 }
 
 .description_btn{
@@ -448,9 +451,17 @@ footer h4{
 	margin-top: 5%;
 }
 
+.searchContainer{
+	margin-top: 50px;
+}
+
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
 
+
+.dev_container{
+	margin-top: 0;
+}
 
 .map_container{
 	float: none !important;
@@ -463,35 +474,35 @@ footer h4{
 }
 
 
-
 .destination_list{
 	font-size: 1.2em;
+}
+
+.favs{
+	margin: 200px auto;
 }
 
 }
 
 @media screen and (min-width: 800px) and (max-width: 1000px) {
 
-body{
-	width: 100%;
-	background-image: asset-url("city_pic.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-}
 .profile_image img{
 	margin-top: 11%;
 }
-
-.search_container{
-	margin: 100px 0;
-}
-
 
 #map{
 	width: 400px;
 	height: 400px;
 }
 
+.favs{
+	margin: 0px auto;
+}
+
+.search_container{
+	margin: 200px auto;
+	margin-bottom: 5%;
+}
 
 .destination_list{
 	font-size: 1.3em;
@@ -502,19 +513,12 @@ body{
 
 @media screen and (min-width: 1001px)and(max-width: 1200px) { 
 
-body{
-	width: 100%;
-	background-image: asset-url("city_pic.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-}
- 
 .profile_image img{
 	margin-top: 11%;
 }
 
-.search_container{
-	margin: 100px 0;
+.about_us{
+	width: 70%;
 }
 
 .profile_image p {
@@ -523,32 +527,58 @@ body{
 }
 
 #map{
-	width: 550px;
-	height: 550px;
+	width: 450px;
+	height: 450px;
+}
+
+.favs{
+	margin: 0px auto;
 }
 
 .destination_list{
 	font-size: 1.3em;
 }
 
+.search_container{
+	margin: 150px auto;
+	margin-bottom: 5%;
+}
+
+
+.dev_container{
+	margin-top: 0;
+}
+
+
 }
 @media screen and (min-width: 1201px)and(max-width: 1500px){
-
-body{
-	width: 100%;
-	background-image: asset-url("city_pic.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-}
 
 .profile_image p {
     width: 300px;
     height: 300px;
 }
 
+
 #map{
-	width: 600px;
-	height: 600px;
+	width: 500px;
+	height: 500px;
+}
+
+.favs{
+	margin: 0px auto;
+}
+
+.about_us{
+	width: 70%;
+}
+
+.search_container{
+	margin: 100px auto;
+	margin-bottom: 5%;
+}
+
+.searchContainer{
+	margin-top: -20px;
 }
 
 
@@ -564,13 +594,6 @@ body{
 
 @media screen and (min-width: 1501px)and(max-width: 1800px){
 
-body{
-	width: 100%;
-	background-image: asset-url("city_pic.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-
 .profile_image img{
 	margin-top: 11%;
 }
@@ -581,25 +604,30 @@ body{
 }
 
 #map{
-	width: 700px;
-	height: 700px;
+	width: 500px;
+	height: 500px;
 }
 
+.favs{
+	margin: 0px auto;
+}
+
+.search_container{
+	margin: 100px auto;
+	margin-bottom: 5%;
+}
 
 .destination_list{
 	font-size: 1.3em;
 }
 
+.about_us{
+	width: 70%;
+}
+
 }
 
 @media screen and (min-width: 1801px)and(max-width: 2000px){
-
-body{
-	width: 100%;
-	background-image: asset-url("city_pic.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-}
 
 .profile_image img{
 	margin-top: 11%;
@@ -608,6 +636,10 @@ body{
 .profile_image p {
     width: 350px;
     height: 350px;
+}
+
+.favs{
+	margin: 0px auto;
 }
 
 .destination_list{
@@ -619,13 +651,6 @@ body{
 
 @media screen and (min-width: 2000px){
 
-body{
-	width: 100%;
-	background-image: asset-url("city_pic.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-
 .profile_image p {
     width: 350px;
     height: 350px;
@@ -637,6 +662,15 @@ body{
 
 .destination_list{
 	font-size: 1.3em;
+}
+
+.search_container{
+	margin: 100px auto;
+	margin-bottom: 5%;
+}
+
+.favs{
+	margin: 0px auto;
 }
 
 }
