@@ -1,69 +1,70 @@
-  <h1 class="search">Search</h1>
-  <div id='map'></div>
+<div class="searchContainer"> 
+    <h1 class="search">Search</h1>
+    <div id='map'></div>
 
-  <div class="search_container">
-    <h4 class="col-xs-10 col-md-8 well ride_share">Search for people around you so you can ride-share!</h4>
+    <div class="search_container">
+      <h4 class="col-xs-10 col-md-8 well ride_share">Search for people around you so you can ride-share!</h4>
 
-    <a class="btn btn-primary search_btn" data-toggle="modal" href='#search'>Search</a>
+      <a class="btn btn-primary search_btn" data-toggle="modal" href='#search'>Search</a>
+    </div>
+  <div class="well col-xs-10 col-sm-10 col-md-8 destination_list">
+
+    <ul>
+      <% @destinations.each do |d| %>
+        <li>Traveling to: <%= d.address %> <span> at <%= d.time %></span></li>
+        <% d.users.each do |u| %>
+          <a href="/users/<%= u.id %>">- <%= u.name %></a>
+          <% end %>
+      <% end %>
+    </ul>
   </div>
-<div class="well col-xs-10 col-sm-10 col-md-8 destination_list">
 
-  <ul>
-    <% @destinations.each do |d| %>
-      <li>Traveling to: <%= d.address %> <span> at <%= d.time %></span></li>
-      <% d.users.each do |u| %>
-        <a href="/users/<%= u.id %>">- <%= u.name %></a>
-        <% end %>
-    <% end %>
-  </ul>
-</div>
+  <br/>
 
-<br/>
+  <div class="modal fade" id="search">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Destination Form</h4>
+        </div>
+        <div class="modal-body">
+    
+        <%= render 'destination/form' %>
 
-<div class="modal fade" id="search">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Destination Form</h4>
-      </div>
-      <div class="modal-body">
-  
-      <%= render 'destination/form' %>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>        
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-<script type="text/javascript">
-  function initMap() {
-    var map;
-    handler = Gmaps.build('Google');
-    handler.buildMap({ 
-      provider: {
-        zoom: 16,
-        center: {lat: 47.608013, lng: -122.335167}
-      }, 
-      internal: {
-        id: 'map'
-      }
-    }, 
-    function(){
-      markers = handler.addMarkers([
-        {
-          "lat": 47.608013,
-          "lng": -122.335167,
-          "infowindow": "hello!"
+  <script type="text/javascript">
+    function initMap() {
+      var map;
+      handler = Gmaps.build('Google');
+      handler.buildMap({ 
+        provider: {
+          zoom: 16,
+          center: {lat: 47.608013, lng: -122.335167}
+        }, 
+        internal: {
+          id: 'map'
         }
-      ]);
-      handler.bounds.extendWith(markers);
-      // handler.fitMapToBounds();
-    });
-  }
+      }, 
+      function(){
+        markers = handler.addMarkers([
+          {
+            "lat": 47.608013,
+            "lng": -122.335167,
+            "infowindow": "hello!"
+          }
+        ]);
+        handler.bounds.extendWith(markers);
+        // handler.fitMapToBounds();
+      });
+    }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?&key=<%= ENV["GOOGLE_KEY"] %>&libraries=geometry&callback=initMap" async defer></script>
 <script src="https://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js"></script>
