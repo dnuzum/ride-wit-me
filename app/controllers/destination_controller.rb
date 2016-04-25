@@ -19,6 +19,9 @@ class DestinationController < ApplicationController
     destination = Location.find_or_create_by(destination_params)
     destination.users << @current_user
     redirect_to destination_path
+
+    test = Geocoder.coordinates("1218 3rd Ave, Seattle, WA")
+    puts test
   end
 
  

@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   get 'reset/:code' => 'passwords#edit', as: :reset_code
   put 'reset/:code' => 'passwords#update'
 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

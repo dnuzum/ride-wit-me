@@ -33,6 +33,7 @@ gem 'rest-client'
 gem 'typhoeus'
 gem 'gmaps4rails'
 gem 'underscore-rails'
+gem 'geocoder'
 
 
 # Use ActiveModel has_secure_password
