@@ -33,6 +33,8 @@ gem 'rest-client'
 gem 'typhoeus'
 gem 'gmaps4rails'
 gem 'underscore-rails'
+gem 'geokit'
+gem 'geokit-rails'
 gem 'geocoder'
 
 
